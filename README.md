@@ -5,3 +5,25 @@ This toolbox overall demonstrates
 2. How to add a function defined in Scilab in Scilab
 3. How to write help for the added functions
 4. How to create a toolbox out of the above functions.
+
+## BUILD INSTRUCTIONS
+
+Open Scilab
+
+First build `libtrans.so`
+```
+cd test
+./exec.sh
+```
+
+Then, 
+```
+cd ../sci_gateway/cpp
+exec builder_gateway_cpp.sce
+exec loader.sce
+```
+
+Use tranpose function by
+```
+res = transpose([2 5 3;1 4 6])
+```
